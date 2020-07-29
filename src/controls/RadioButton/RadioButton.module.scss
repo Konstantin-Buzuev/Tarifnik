@@ -1,0 +1,51 @@
+@import '../../styles/colors', '../../styles/mixins', '../../styles/fonts';
+
+.radio {
+    & input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin: 10px 0 0 7px;
+    }
+
+    &__text {
+        position: relative;
+        padding: 0 0 0 15px;
+        cursor: pointer;
+        @include Subtitle-Main;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border: 1px solid $color-black;
+            border-radius: 50%;
+            background: $color-white;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 2px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $color-black;
+            opacity: 0;
+            transition: .2s;
+        }
+    }
+
+    & input:checked+&__text:after {
+        opacity: 1;
+    }
+
+    & input:not([checked])+&__text:after {
+        opacity: 0;
+    }
+
+}
