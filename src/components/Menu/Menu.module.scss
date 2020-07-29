@@ -1,0 +1,76 @@
+@import '../../styles/colors', '../../styles/mixins', '../../styles/fonts';
+
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+    z-index: inherit;
+}
+
+.section {
+    position: relative;
+    min-width: 135px;
+    max-width: 200px;
+    width: 100%;
+    cursor: default;
+    display: inline-block;
+    text-align: center;
+
+    &__title {
+        @include Title-Header;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        padding: 5px 5px;
+        border-bottom: none;
+        width: 200px;
+        height: 60px;
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        background-color: $color-white;
+        min-width: 100%;
+        border-radius: 0px 0px 20px 20px;
+        z-index: 1;
+
+        &:hover {
+            display: block;
+        }
+    }
+
+    &:hover &__dropdown {
+        display: block;
+    }
+
+    &:hover &__title {
+        color: $color-section-selected;
+        border-bottom: 3px solid $color-section-selected;
+        padding-bottom: 2px;
+
+    }
+
+    &__item {
+        @include Subtitle-Header;
+        height: 40px;
+        padding: 0px 15px;
+        line-height: 40px;
+        display: block;
+        text-align: left;
+
+        &:last-of-type {
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        &:hover {
+            @include Subtitle-Header-Selected;
+            color: $color-white;
+            line-height: 40px;
+            background-color: $color-selected-subsection-background;
+        }
+    }
+}
