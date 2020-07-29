@@ -1,0 +1,31 @@
+@import '../../styles/colors', '../../styles/mixins', '../../styles/fonts';
+
+.input {
+    @include Subtitle-Main;
+    display: block;
+    max-width: 470px;
+    width: 100%;
+    padding-left: 13.25px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: $color-white;
+    border: none;
+    margin: 0 auto 18px auto;
+
+    &::placeholder {
+        color: $color-placeholder;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &_wrong {
+        outline: none;
+        border: solid 1px red;
+        &::placeholder{
+            color: red;
+            opacity: 0.5;
+        }
+    }
+}
