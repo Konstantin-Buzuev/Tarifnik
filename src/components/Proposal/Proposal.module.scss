@@ -1,0 +1,74 @@
+@import '../../styles/colors', '../../styles/mixins', '../../styles/fonts';
+
+.proposal {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    padding: 155.5px 15px;
+    left: 0px;
+    top: 0;
+    background: url('../../assets/images/contentImage.jpg') no-repeat 55% 50%;
+    background-size: cover;
+
+    &__form {
+        z-index: 5;
+        margin: 0 auto;
+        max-width: 750px;
+        border-radius: 20px;
+        background-color: $color-background-propoal;
+        padding: 40px 20.69px 44.25px 21.5px;
+    }
+    &__wrapper{
+        max-width: 470px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+    }
+    &__title{
+        @include Title-Main;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__radiobuttons{
+        display: flex;
+        margin: 0 auto;
+        max-width: 470px;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+        margin-bottom: 30px;
+        &_mobile{
+            justify-content: space-between;
+        }
+    }
+    
+    &__isRequiredWarning{
+        @include Subtitle-Query-Sub;
+        margin-bottom:24px;
+    }
+    &__button{
+        @include Caption-Button;
+        color: $color-white;
+        background-color: $color-background-button;
+        text-align: center;
+        max-width: 198.68px;
+        margin: 0 auto;
+        padding: 11px 33px;
+        border-radius: 20px;
+        border: none;
+        cursor: default;
+        &:hover{
+            cursor: pointer;
+        }
+        &:focus, &:active{
+            outline: none;
+        }
+    }
+}
+
+
