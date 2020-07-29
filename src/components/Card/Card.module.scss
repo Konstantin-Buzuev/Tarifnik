@@ -1,0 +1,106 @@
+@import '../../styles/colors', '../../styles/mixins', '../../styles/fonts';
+
+.card {
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 18.5px 20px 25.75px 20px;
+    margin: 10px;
+    background: $color-white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+
+    &__title {
+        @include Title-Main;
+        text-align: center;
+        text-decoration: underline;
+        height: 36.5px;
+    }
+
+    &__propertyContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 22px 15px 15px 15px;
+        border-bottom: 1px solid $color-divider;
+        margin-bottom: 25px;
+    }
+
+    &__property {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    &__icon {
+        display: block;
+        width: 50px;
+        background: transparent;
+        align-self: center;
+    }
+
+    &__text {
+        height: 52px;
+        line-height: 52px;
+
+        & span {
+            @include Subtitle-Card-Channels;
+            line-height: normal;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & span {
+            @include Fare-Price;
+        }
+    }
+
+    &__dimension {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & span {
+            @include Subtitle-Card-Price;
+            &:first-letter{
+                text-transform: lowercase;
+            }
+            &:first-of-type{
+                border-bottom: 1px solid $color-black;
+            }
+        }
+    }
+    &__button{
+        @include Caption-Button;
+        color: $color-white;
+        background-color: $color-background-button;
+        text-align: center;
+        padding: 11px 33px;
+        border-radius: 20px;
+        border: none;
+        cursor: default;
+        &:hover{
+            cursor: pointer;
+        }
+        &:focus, &:active{
+            outline: none;
+        }
+    }
+
+}
