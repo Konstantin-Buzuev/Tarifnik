@@ -1,0 +1,38 @@
+@import '../../styles/colors', '../../styles/mixins', '../../styles/fonts';
+
+.header {
+    position: absolute;
+    transition-property: top;
+    transition-duration: 0.5s;
+    top: 0;
+    z-index: 10;
+    opacity: 0.8;
+    background-color: $color-background-header;
+    height: 60px;
+    width: 100%;
+    line-height: 60px;
+    &_hide{
+        top:-60px;
+    }
+
+    &__menu {
+        max-width: 1170px;
+        padding: 0px 15px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+    }
+
+    &__logo {
+        z-index: inherit;
+        min-width: 165px;
+        max-width: 165px;
+        background: transparent;
+    }
+
+
+
+
+}
