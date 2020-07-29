@@ -1,0 +1,70 @@
+@import "./colors", "./fonts";
+
+// Fonts
+@mixin Title-Header {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+@mixin Subtitle-Header {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+@mixin Subtitle-Header-Selected {
+  @include Subtitle-Header;
+  font-weight: 500;
+}
+
+@mixin Title-Main {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+}
+
+@mixin Subtitle-Main {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+@mixin Subtitle-Query-Sub {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin Subtitle-Card-Channels {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin Subtitle-Card-Price {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin Fare-Price {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 46px;
+}
+
+@mixin Caption-Button {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+}
